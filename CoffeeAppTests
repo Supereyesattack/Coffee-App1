@@ -1,0 +1,71 @@
+using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+namespace CoffeeAppTests
+{
+    [TestClass]
+    public class CoffeeAppTests
+    {
+        [TestMethod]
+        public void testOrderBagCompletewhenEmpty()
+        {
+            /*if you Click tp Complete an order when it is Empty it should not process*/
+
+            //input
+            string expected = "empty - Cannot place empty order"; //expected
+            string actual = "input(empty)"; //actual = manipulate input
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void testOrderBagAdd()
+        {
+            /*if you Click on an item it should increase the order bag quantity*/
+            
+            //input
+            string expected = "add1"; //expected
+            string actual = "input(add1)"; //actual = manipulate input
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void testOrderBagCompleteFull()
+        {
+            /*if you click to Complete an order it should delete all items from order bag
+            this ensures that there will be no duplicates for the next order*/
+
+            //input
+            string expected = "empty"; //expected
+            string actual = "input(empty)"; //actual = manipulate input
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void testLocationSelect()
+        {
+            /*if you click on a Location, it will forward you to the appropiate Menu*/
+
+            //input
+            string expected = "starbucksmenu"; //expected
+            string actual = "input(starbucksmenu)"; //actual = manipulate input
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void testMenuDirect()
+        {
+            /*if you click on a Item from Menu, it should direct you to bring you to a list of specific order items*/
+
+            //input
+            string expected = "hotdrinks"; //expected
+            string actual = "input(hotdrinks)"; //actual = manipulate input
+
+            Assert.AreEqual(expected, actual);
+        }
+
+    }
+}
